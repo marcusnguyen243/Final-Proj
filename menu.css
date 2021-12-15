@@ -1,0 +1,43 @@
+html,
+body {
+  font-family: "Source Code Pro", monospace;
+  margin: auto;
+
+  left-padding: 200px;
+  background-color: black;
+  font-size: 10px;
+}
+
+.center {
+  display:flex;
+  justify-content: center;
+  align-items:center;
+  color:white;
+}
+
+.statementp {
+  margin: auto;
+  width:50%;
+  text-align: center;
+  color:white;
+  border: 1px solid white;
+  padding: 30px;
+}
+
+ a {
+ display: inline-block;
+ padding: 9px;
+ font-size: 12px;
+ color: white;
+
+  }
+
+audio
+{ display:none;}
+
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 1.5em;
+text-color:green;
+}
