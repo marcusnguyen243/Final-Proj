@@ -51,51 +51,22 @@
 function setup(){
   createCanvas(windowWidth, windowHeight);
 
-buttn = createSprite(730,560);
-buttn2 = createSprite(770,490);
+
 
 bgMusic.play();
 
-buttn2.addAnimation('unpressed','assets/BTN.png');
-buttn2.addAnimation('pressed','assets/BTN2.png');
-
-buttn.addAnimation('unpressed','assets/BTN.png');
-buttn.addAnimation('pressed','assets/BTN2.png');
 
 
-  //I used arrays to toggle scenes. The first button subtracts from the array, and takes you to the previous scene.
 
-buttn.onMousePressed = function(){
-  this.changeAnimation('pressed');
-buttnSound.play();
-buttnSound.setVolume(.4);
+
+
+
+ 
 
 
 }
 
 
-  //This button advances the array forward by adding x to itself.
-
-
-  buttn.onMouseReleased = function(){
-  this.changeAnimation('unpressed');
-  }
-
-  buttn2.onMousePressed = function(){
-  this.changeAnimation('pressed');
- buttnSound.play();
-buttnSound.setVolume(.4);
-}
-
-
-
-    buttn2.onMouseReleased = function(){
-    this.changeAnimation('unpressed');
-    }
-
-}
-
-  //gifs[x] and textArray[x] are the various scenes and blurbs of text. They are advanced forward by the if statements in the buttons.
 
 
 function draw(){
