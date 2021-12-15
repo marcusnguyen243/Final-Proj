@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+<script src="p5.js"></script>
+<script src="scenemanager.js"></script>
+<script src="p5.play.js"></script>
+<script src="p5.sound.js"></script>
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Night City</title>
+        <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class ="center">
+<h1>
+  Welcome to Night City! Click on any one of the restaurants to view their menus.
+</h1>
+<br>
+  <br>
+  <a href ="3.html">Statement </a>
+</div>
+  </body>
+</html>
+
+
+
+
+<script>
+
+
+  var buttnSound;
+  var bgMusic;
+  var city;
+
+  function preload(){
+
+    buttnSound = loadSound('assets/buttnsound.mp3');
+    bgMusic = loadSound('assets/bgm.mp3');
+    city = loadImage('assets/city.png');
+
+  }
+
+function setup(){
+  createCanvas(windowWidth, windowHeight);
+  image(city,0,0,windowWidth, windowHeight*1.2);
+buttn = createSprite(730,560);
+buttn2 = createSprite(770,490);
+
+bgMusic.play();
+bgMusic.setVolume(.3);
+
+buttn2.addAnimation('unpressed','assets/BTN.png');
+buttn2.addAnimation('pressed','assets/BTN2.png');
+
+buttn.addAnimation('unpressed','assets/BTN.png');
+buttn.addAnimation('pressed','assets/BTN2.png');
+
+
+  //I used arrays to toggle scenes. The first button subtracts from the array, and takes you to the previous scene.
+
+buttn.onMousePressed = function(){
+  this.changeAnimation('pressed');
+buttnSound.play();
+buttnSound.setVolume(.4);
+
+
+}
+
+
+  //This button advances the array forward by adding x to itself.
+
+
+  buttn.onMouseReleased = function(){
+  this.changeAnimation('unpressed');
+  }
+
+  buttn2.onMousePressed = function(){
+  this.changeAnimation('pressed');
+ buttnSound.play();
+buttnSound.setVolume(.4);
+}
+
+
+
+    buttn2.onMouseReleased = function(){
+    this.changeAnimation('unpressed');
+    }
+
+}
+
+  //gifs[x] and textArray[x] are the various scenes and blurbs of text. They are advanced forward by the if statements in the buttons.
+
+
+function draw(){
+//background(255);
+
+
+
+}
+</script>
